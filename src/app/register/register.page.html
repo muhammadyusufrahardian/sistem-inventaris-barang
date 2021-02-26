@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <p></p>
+    <ion-icon name="arrow-back" fill="clear" routerLink="/loginutama" ></ion-icon>
+    <p></p>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  color="light">
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Create your account!</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Nama" [(ngModel)]="user.fullName"></ion-input>
+            </ion-item>
+            <p></p>
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="your@email.com" [(ngModel)]="user.email"></ion-input>
+            </ion-item>
+            <p></p>
+            
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+            </ion-item>
+            <p></p>
+            <ion-item>
+              <ion-input name="confirm" type="password" placeholder="ulangi Password" [(ngModel)]="user.passwordCek"></ion-input>
+            </ion-item>
+          </div>
+          <p></p>
+          <div padding>
+            <ion-button expand="block" detail (click)="registrasi()" [disabled]="loading || user.password == undefined || user.password != user.passwordCek">{{loading ? 'tunggu..':'Register'}}</ion-button>
+
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

@@ -1,0 +1,66 @@
+
+  
+<ion-app>
+  <ion-header translucent>
+
+  
+
+  
+  
+  <p></p>
+  
+  <ion-card>
+    <div class="ion-page" id="main-content"></div>
+     
+        <ion-toolbar>
+         
+          <p></p>
+          <ion-icon name="arrow-back" fill="clear" routerLink="/databarang"></ion-icon>
+          <p></p>
+          <ion-item>
+           
+            <H5>DATA BARANG</H5>
+           
+      
+          <div class="ion-padding" style="text-align: right;"> 
+            <img src="assets/Rectangle 1.png">
+          </div>
+        </ion-item>
+      </ion-toolbar>
+     
+  
+  </ion-card>
+</ion-header>
+      
+     
+      
+       
+  <ion-content fullscreen>
+
+    <ion-item>
+      <ion-label>ID Barang &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</ion-label>
+      <ion-input placeholder="masukkan data" type="text" [(ngModel)]="data.id"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label>Nama Barang &nbsp;:</ion-label>
+      <ion-input placeholder="masukkan data" type="text" [(ngModel)]="data.nama"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label>jumlah &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</ion-label>
+      <ion-input placeholder="masukkan data" type="text" [(ngModel)]="data.jumlah"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</ion-label>
+      <ion-input placeholder="masukkan data" type="text" [(ngModel)]="data.status"></ion-input>
+    </ion-item>
+    <ion-button shape="round" class="underline" detail (click)="simpandata()" [disabled]='loading'>
+     {{ Loading ? 'Menyimpan..' : 'Simpan'}} 
+      </ion-button>
+    </ion-content>
+    
+      
+  </ion-app>
+ 

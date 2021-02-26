@@ -1,0 +1,117 @@
+<ion-app>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="list" slot="start" ></ion-icon>
+        <ion-item  fill="clear" routerLink="/databarang"><ion-segment>Data Barang</ion-segment></ion-item>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="arrow-undo-outline" slot="start"></ion-icon>
+        <ion-item  fill="clear" routerLink="/transaksi"><ion-segment>Peminjaman</ion-segment></ion-item>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+        <ion-item  fill="clear" routerLink="/laporan"><ion-segment>Laporan</ion-segment></ion-item>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="exit-outline" slot="start" ></ion-icon>
+        <ion-item  detail (click)="logout()"><ion-segment>Logout</ion-segment></ion-item>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-card class="energized" >
+<div class="ion-page" id="main-content"></div>
+ 
+    <ion-toolbar >
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <p></p>
+
+      <ion-item>
+        <H5>INVENTARIS BARANG</H5>
+        <ion-avatar slot="end" >
+          <img src ="assets/admin5.jpg">
+    </ion-avatar>
+  </ion-item>
+</ion-toolbar>
+      <div class="ion-padding" style="text-align: right;"> 
+        <img src="assets/icons8-big-parcel-96.png">
+<p></p><p></p>
+      </div>
+     
+  </ion-card>
+  
+  <ion-card >
+        <ion-card-content fill="clear" routerLink="/databarang">
+           <ion-segment>DATA BARANG</ion-segment>
+        <div class="gambar-card" style="text-align: center;"> 
+          <img class="gambar-card"  src="assets/icons8-list-64(1).png">
+        </div>
+           </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content fill="clear" routerLink="/transaksi">
+      
+       <ion-segment>TRANSAKSI PEMINJAMAN</ion-segment>
+       <div class="gambar-card" style="text-align: center;"> 
+          <img class="gambar-card" src="assets/icons8-planner-100.png">
+        </div>
+      </ion-card-content>
+</ion-card>
+
+  <ion-card>
+    <ion-card-content  fill="clear" routerLink="/laporan">
+     
+        <ion-segment>LAPORAN</ion-segment>
+        <div class="gambar-card" style="text-align: center;"> 
+          <img class="gambar-card" src="assets/icons8-documents-64.png">
+        </div>
+      </ion-card-content>
+</ion-card>
+
+
+<ion-toolbar>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="schedule" routerLink="/help">
+      <ion-icon name="help"></ion-icon>
+      <ion-label>help</ion-label>
+    </ion-tab-button>
+
+    
+    <ion-tab-button tab="about"  routerLink="/about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+
+
+    <ion-tab-button tab="about"   routerLink="/profil">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>profil</ion-label>
+    </ion-tab-button>
+
+   
+  </ion-tab-bar>
+</ion-tabs>
+
+</ion-toolbar>
+</ion-app>

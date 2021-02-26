@@ -1,0 +1,110 @@
+.event-container{
+    position: relative;
+}
+.event-container img{
+    z-index: 1;
+}
+.event-container .overlay{
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+    opacity: 0.5;
+    z-index: 2;
+    height: 50%;
+}
+
+.event-header{
+    padding: 5px;
+}
+.event-header img{
+    width: 30px;
+    margin-right: 5px;
+}
+
+.event-container .text-container{
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 3;
+    color:white;
+    text-align: center;
+    text-shadow: black 1px 1px 3px;
+}
+.event-container .text-container p,h3{
+    padding: 0px;
+    margin: 0;
+}
+.event-container .text-container h3{
+    font-weight: 700;
+}
+.event-container .info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 45px;
+    bottom: 0;
+    padding:5px;
+}
+
+.col-event{
+    padding: 0 10px 10px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .event-header{
+        padding: 10px;
+    }
+    .event-header img{
+        width: 40px;
+        margin-right: 10px;
+    }
+    .event-container .text-container{
+        position: absolute;
+        bottom: 45px;
+        right: 0;
+        left: 0;
+        padding: 20px;
+        z-index: 3;
+        color:white;
+        text-align: center;
+        text-shadow: black 1px 1px 5px;
+    }
+    .event-container .text-container h3{
+        font-weight: 700;
+        font-size: 42px;
+    }
+    .event-container .text-container p {
+        font-size: 18px;
+    }
+    .col-event{
+        padding: 0px;
+    }
+}
+
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+}
+
+ ion-button{
+    width: 70px;  
+    height: 35px;  
+    padding: 5px 0 10px 0;
+   
+}
+.underline
+{
+  font-size: 10px;
+}
+
+img{
+  width: 75px;  
+    height: 90px; 
+}
+ion-app{
+  background-color: #f7f7f7;
+}

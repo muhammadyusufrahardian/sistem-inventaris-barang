@@ -1,0 +1,57 @@
+<ion-app>
+  <ion-header translucent>
+
+  
+
+  
+  
+  <p></p>
+  
+  <ion-card>
+    <div class="ion-page" id="main-content"></div>
+     
+        <ion-toolbar>
+         
+          <p></p>
+          <ion-icon name="arrow-back" fill="clear" routerLink="/databarang"></ion-icon>
+          <ion-item>
+           
+            <H5>DATA BARANG</H5>
+           
+    
+            <div class="ion-padding" style="text-align: right;"> 
+              <img src="assets/Rectangle 1.png">
+            </div>
+        </ion-item>
+      </ion-toolbar>
+     
+  
+  </ion-card>
+</ion-header>
+  
+      
+       
+  <ion-content >
+    
+    
+    <ion-item *ngFor=" let n of dataform">
+      <ion-label>ID Barang &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</ion-label>
+      <ion-label> {{ data.id}} </ion-label>
+    </ion-item>
+    <br>
+    <ion-item *ngFor=" let n of dataform">
+      <ion-label>Nama Barang&nbsp;:</ion-label>
+      <ion-label> {{data.nama}} </ion-label>
+    </ion-item>
+    <br>
+    <ion-item *ngFor=" let n of dataform">
+      <ion-label>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</ion-label>
+      <ion-label> {{data.status}} </ion-label>
+    </ion-item>
+    <ion-button shape="round" class="underline"  routerLink="/databarang">
+      Simpan
+      </ion-button>
+    </ion-content>
+    
+      
+  </ion-app>

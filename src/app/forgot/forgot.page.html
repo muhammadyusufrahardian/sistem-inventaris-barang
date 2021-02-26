@@ -1,0 +1,46 @@
+<ion-content>
+
+  <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+    <ion-col size-md="6" style="height: 100%;" style="background-color: transparent;">
+
+      <div style="text-align: center; padding: 30px 0 10px 0;">
+        <img src="assets/LOGO_RPL.png" width="50px">
+        <ion-text color="secondary">
+          <h4 style="line-height: 14px;"></h4>        
+        </ion-text>
+      </div>
+
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Password Recovery</ion-card-title>
+  </ion-card-header>
+  <p style="text-align: center; padding: 5px;">We will send the password recovery url to your email</p>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+
+  <div class="ion-padding">
+    <ion-button expand="full" shape="round" (click)="forgot()" [disabled]="loading">{{loading ? 'Tunggu..':'Send'}}</ion-button>
+  </div>  
+
+<div class="ion-padding ion-text-center">
+  <ion-button fill="clear" routerLink="/register">Create Account</ion-button>
+  <ion-button fill="clear" routerLink="/login">Login</ion-button>
+</div>
+   
+</ion-card>
+
+
+
+
+
+</ion-col>
+</ion-row>
+
+
+
+</ion-content>
